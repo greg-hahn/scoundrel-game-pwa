@@ -1,0 +1,56 @@
+.debug {
+  padding: 0 1rem 1rem;
+}
+
+.debug-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.debug-header .label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.debug-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.debug-controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text);
+}
+
+.debug-controls input[type='text'] {
+  width: 80px;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #242947;
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+.debug-body {
+  margin-top: 0.5rem;
+}
+
+.deck-dump {
+  padding: 0.5rem;
+  border: 1px dashed #2a3156;
+  border-radius: 10px;
+  background: #101427;
+  color: var(--muted);
+  max-height: 200px;
+  overflow: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin: 0;
+}

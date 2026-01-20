@@ -1,0 +1,115 @@
+/*
+  Scoundrel — Global Game Styles
+  Modern palette, accessible focus, responsive layout, and tasteful micro-interactions.
+*/
+:root {
+  --bg: #0f1220;
+  --panel: #171a2b;
+  --panel-2: #1e2237;
+  --text: #e6eaf5;
+  --muted: #aab2c5;
+  --accent: #7aa2ff;
+  --accent-2: #72f2d4;
+  --danger: #ff6b6b;
+  --warning: #ffd166;
+  --success: #72f2a7;
+  /* Card theme colors */
+  --monster: #a77dff; /* purple */
+  --weapon: #ff9f6e; /* orange */
+  --potion: #6ed8ff; /* cyan */
+  /* Suit colors */
+  --club-spade: #e6eaf5;
+  --heart: #ff7aa2;
+  --diamond: #ffd58e;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8fc;
+    --panel: #ffffff;
+    --panel-2: #f1f3f9;
+    --text: #0d1b2a;
+    --muted: #546a86;
+    --accent: #2d6cdf;
+    --accent-2: #1fb8a6;
+    --danger: #d90429;
+    --warning: #f4a261;
+    --success: #2a9d8f;
+    --monster: #7444d6;
+    --weapon: #e76f51;
+    --potion: #2a9d8f;
+    --club-spade: #0d1b2a;
+    --heart: #c9184a;
+    --diamond: #b08968;
+  }
+}
+
+.scoundrel-game {
+  min-height: 100vh;
+}
+
+.board {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.board-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid transparent;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  background: var(--panel-2);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+  font-size: 1rem;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: #081019;
+}
+
+.btn.small {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: var(--panel-2);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Accessibility & motion preferences */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

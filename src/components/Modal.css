@@ -1,0 +1,68 @@
+/* Modal styles */
+::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.dialog-open {
+  overflow: hidden;
+}
+
+.modal {
+  border: 1px solid #242947;
+  border-radius: 16px;
+  background: var(--panel);
+  color: var(--text);
+  max-width: 700px;
+  width: calc(100% - 2rem);
+  padding: 0;
+}
+
+.modal h2 {
+  padding: 1rem 1rem 0;
+  margin: 0;
+}
+
+.modal h3 {
+  margin: 1rem 0 0.5rem;
+  color: var(--accent);
+}
+
+.modal-content {
+  padding: 0.75rem 1rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.modal-content ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid #242947;
+}
+
+.score-line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin: 0.5rem 0;
+}
+
+.score-line .label {
+  color: var(--muted);
+}
+
+.score-line strong {
+  font-size: 1.5rem;
+  color: var(--accent);
+}

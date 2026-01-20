@@ -1,0 +1,104 @@
+.hud {
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(20, 24, 42, 0.9), rgba(20, 24, 42, 0.6));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #1f2340;
+  z-index: 10;
+}
+
+.hud-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.6fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hud-row.subtle {
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.hud-group {
+  background: var(--panel);
+  border: 1px solid #242947;
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+}
+
+.hud-group .label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.health-bar {
+  width: 100%;
+  height: 14px;
+  border-radius: 10px;
+  background: #242947;
+  overflow: hidden;
+  border: 1px solid #2a3156;
+}
+
+.health-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--success), var(--accent-2));
+  transition: width 220ms ease;
+}
+
+.health-value {
+  font-variant-numeric: tabular-nums;
+  margin-top: 0.3rem;
+}
+
+.weapon-info {
+  display: flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.weapon-info .sep {
+  opacity: 0.4;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 1rem;
+  align-items: center;
+}
+
+.stat .label {
+  color: var(--muted);
+  margin-right: 0.25rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.avoid-state {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .hud-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .controls {
+    justify-content: flex-start;
+  }
+}
